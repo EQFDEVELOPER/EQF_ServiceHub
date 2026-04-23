@@ -1,0 +1,12 @@
+{
+    "name": "eqf-servicehub",
+    "version": "1.0.0",
+    "scripts": {
+        "build:css": "tailwindcss -i ./public/assets/css/input.css -o ./public/build/css/app.css --watch"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.17",
+        "postcss": "^8.4.49",
+        "autoprefixer": "^10.4.20"
+    }
+}
