@@ -21,6 +21,9 @@ class Router
         }
 
         $uri = $uri ?: '/';
+        if ($uri === '/index.php') {
+    $uri = '/';
+}
 
         foreach ($this->routes as [$routeMethod, $routeUri, $handler]) {
             if ($method === $routeMethod && $uri === $routeUri) {
