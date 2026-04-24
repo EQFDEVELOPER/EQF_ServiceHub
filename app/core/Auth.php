@@ -14,17 +14,19 @@ class Auth
         return Session::get('user');
     }
 
-    public static function login(array $user): void
-    {
-        Session::set('user', [
-            'id' => $user['id'],
-            'firstName' => $user['first_name'],
-            'lastName' => $user['last_name'],
-            'email' => $user['email'],
-            'roleCode' => $user['role_code'],
-            'areaCode' => $user['area_code'],
-        ]);
-    }
+public static function login(array $user): void
+{
+     Session::start();
+    Session::set('user', [
+        'id' => $user['id'],
+        'firstName' => $user['first_name'],
+        'lastName' => $user['last_name'],
+        'email' => $user['email'],
+        'roleCode' => $user['role_code'],
+        'areaCode' => $user['area_code'],
+    ]);
+
+}
 
     public static function logout(): void
     {
